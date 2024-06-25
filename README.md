@@ -17,6 +17,7 @@ The Website [Link](https://omarsamirr.github.io/WeatherGuide/).
 
 ## Features
 
-* Show current weather, temperature, rain and wind
-* Show forecast for two days
+* Auto-detect your location if acces is granted.
+* Show current weather, temperature, rain and wind.
+* Show forecast for two days.
 
