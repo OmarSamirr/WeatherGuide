@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navId" class="navbar px-5 py-4 navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-1 text-white ms-5" href="#"
+            ><i class="fa-solid fa-cloud-sun-rain"></i> Weather<span
+              >Guide</span
+            ></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 gap-4 me-5">
+              <li class="nav-item mx-auto">
+                <a
+                  class="nav-link m-2 py-0 px-4 rounded-pill active"
+                  aria-current="page"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-auto">
+                <a class="nav-link m-2 py-0 px-4 rounded-pill" href="#"
+                  >Photos</a
+                >
+              </li>
+              <li class="nav-item mx-auto">
+                <a class="nav-link m-2 py-0 px-4 rounded-pill" href="#">News</a>
+              </li>
+              <li class="nav-item mx-auto">
+                <a class="nav-link m-2 py-0 px-4 rounded-pill" href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="body" id="home">
+      <div class="container">
+        <div
+          class="search text-center d-flex flex-row form-control rounded-pill w-100 mx-auto my-4 p-2"
+        >
+          <input
+            id="searchBar"
+            class="fs-6 p-2 flex-grow-1 border-0 rounded-pill"
+            placeholder="Find your City..."
+            type="text"
+          />
+          <button id="searchBtn" class="btn fs-6 text-white rounded-pill px-5">
+            Find
+          </button>
+        </div>
+        <div class="row gy-4 my-5">
+          <div class="col-lg-4">
+            <div class="card overflow-hidden">
+              <div class="card-body p-0">
+                <div class="heading px-4 py-2 d-flex justify-content-between">
+                  <span id="todayDay"></span>
+                  <span id="todayDate"></span>
+                </div>
+
+                <h6 id="city" class="m-4 fs-2"></h6>
+
+                <h1 id="todayDegree" class="mx-4 d-inline-block"></h1>
+                <span id="timeIcon" class="mx-4 text-center"
+                  ><img class="w-25 pb-4" id="todayIcon" src="" alt=""
+                /></span>
+
+                <span id="todayWeather" class="mx-4 fs-3"></span>
+                <div class="d-flex gap-4 bag m-4">
+                  <div class="rain">
+                    <i class="fa-solid fa-umbrella"></i>
+                    <span id="rain"></span>
+                  </div>
+                  <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span id="wind"></span>km/hr
+                  </div>
+                  <div class="direction">
+                    <i class="fa-regular fa-compass"></i>
+                    <span id="direction"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card overflow-hidden text-center">
+              <div class="card-body p-0">
+                <div class="heading px-4 py-2 d-flex justify-content-center">
+                  <span id="tomorrowDay"></span>
+                </div>
+
+                <div
+                  class="content d-flex flex-column gap-5 pb-5 pt-3 justify-content-between"
+                >
+                  <span class="mx-4 d-block text-center"
+                    ><img class="pt-4" id="tomorrowIcon" src="" alt=""
+                  /></span>
+
+                  <div>
+                    <span class="d-block fs-2" id="tomorrowHDegree"></span>
+                    <span
+                      class="d-block fs-3 text-white-50"
+                      id="tomorrowLDegree"
+                    ></span>
+                  </div>
+
+                  <span id="tomorrowWeather" class="mx-4 d-block fs-4"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card overflow-hidden text-center">
+              <div class="card-body p-0">
+                <div class="heading px-4 py-2 d-flex justify-content-center">
+                  <span id="afterTomorrowDay"></span>
+                </div>
+
+                <div
+                  class="content d-flex flex-column gap-5 pb-5 pt-3 justify-content-between"
+                >
+                  <span id="timeIcon" class="mx-4 d-block text-center"
+                    ><img class="pt-4" id="afterTomorrowIcon" src="" alt=""
+                  /></span>
+
+                  <div>
+                    <span class="d-block fs-2" id="afterTomorrowHDegree"></span>
+                    <span
+                      class="d-block fs-3 text-white-50"
+                      id="afterTomorrowLDegree"
+                    ></span>
+                  </div>
+
+                  <span
+                    id="afterTomorrowWeather"
+                    class="mx-4 d-block fs-4"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loading d-none">
+      <span class="loader"></span>
+    </div>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>

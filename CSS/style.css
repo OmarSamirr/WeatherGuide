@@ -1,0 +1,104 @@
+.navbar {
+  background-color: rgb(53, 65, 65);
+}
+.navbar-brand span {
+  color: #39dfbe;
+}
+
+.nav-link {
+  color: white;
+  font-size: 18px;
+  outline: transparent solid 2px;
+  transition: all 0.2s;
+  width: fit-content;
+}
+.nav-link.active {
+  color: #39dfbe !important;
+  outline: #39dfbe solid 2px !important;
+}
+.nav-link:hover {
+  outline: #39dfbe solid 2px;
+  color: #39dfbe;
+}
+.form-control:focus-within {
+  border-color: #39dfbe;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #39dfbe5b;
+}
+input:focus {
+  outline: none;
+}
+.search, input{
+    background-color: #fff;
+
+}
+button{
+    background-color: #354141 !important;
+    color: white;
+}
+
+.body{
+  background-image: url(../Images/banner.png);
+  background-repeat: no-repeat;
+  background-color: #002e2e;
+  overflow: auto;
+  height: fit-content;
+}
+.card{
+  background-color: #354141e4;
+  height: 100%;
+}
+
+.bag{
+  font-size: 20px;
+  color: #39dfbe;
+}
+.card-body{
+  color: lightgray;
+  
+}
+h1{
+  font-size: 80px;
+  font-weight: bold;
+}
+.heading{
+  background-color: #0d47476e;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #39dfbe;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+.loading{
+  position: fixed;
+  inset: 0;
+  background-color: #354141af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
