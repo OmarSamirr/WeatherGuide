@@ -3,7 +3,7 @@
 A simple website showing weather details for any city using weatherapi.com.
 
 # Demo
-The Website [Link](https://pages.github.com/).
+The Website [Link](https://omarsamirr.github.io/WeatherGuide/).
 
 ## Technologies Used
 
@@ -13,6 +13,7 @@ The Website [Link](https://pages.github.com/).
 * fontawesome
 * JavaScript
 * API (weatherapi.com)
+* Responsive Web Design
 
 ## Features
 
